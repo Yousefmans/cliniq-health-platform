@@ -1,20 +1,14 @@
 # ClinIQ Healthcare Platform
 
-Interactive Arabic RTL UI/UX prototype for an AI-powered healthcare marketplace.
+Arabic RTL UI/UX prototype and a FastAPI backend foundation for an AI-powered healthcare marketplace.
 
-## Included experiences
+## Project folders
 
-- Patient dashboard, doctor search, AI assistant, booking and notifications
-- Doctor dashboard, appointments, clinical assistant, verification and subscriptions
-- Admin dashboard, verification requests, users, specialties and reports
-- Responsive layout for desktop and mobile
+- `index.html`, `styles.css`, `app.js` — interactive frontend prototype. Open `index.html` in a browser.
+- [`backend/`](backend/README.md) — API for accounts, doctor verification and search, appointment slots, booking, reviews, and role-based access. See its README for setup.
 
-## Run locally
-
-Open `index.html` in a browser. No build step is required.
-
-## Live demo
+## Live frontend demo
 
 https://cliniq-health-platform.knrpl3-791891032.chatgpt.site
 
-> This repository is a front-end prototype. Authentication, databases, payments, and production AI services require backend integration.
+The live frontend currently uses demonstration data and is not connected to the API. Patient and doctor assistant endpoints are placeholders that return HTTP 501 until validated AI services are integrated. Payments and production deployment of the API remain future work.
