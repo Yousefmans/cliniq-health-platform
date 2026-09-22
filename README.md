@@ -1,14 +1,14 @@
-# ClinIQ Healthcare Platform
+# ClinIQ
 
-Arabic RTL UI/UX prototype and a FastAPI backend foundation for an AI-powered healthcare marketplace.
+موقع لحجز مواعيد الأطباء بلوحات للمريض والطبيب ومدير المنصة.
 
-## Project folders
+- الموقع المباشر: https://cliniq-health-platform.knrpl3-791891032.chatgpt.site
+- مصدر الموقع المنشور: [web-app](./web-app)
+- نموذج الواجهة القديم: [web-app/public/demo](./web-app/public/demo)
+- نموذج FastAPI مستقل للتطوير المحلي: [backend](./backend)؛ الموقع المباشر يستخدم API وقاعدة D1 الموجودة في web-app.
 
-- `index.html`, `styles.css`, `app.js` — interactive frontend prototype. Open `index.html` in a browser.
-- [`backend/`](backend/README.md) — API for accounts, doctor verification and search, appointment slots, booking, reviews, and role-based access. See its README for setup.
+## التشغيل والتطوير
 
-## Live frontend demo
+يتطلب Node.js 22 و pnpm. من مجلد web-app شغّل `pnpm install` ثم `pnpm db:generate` و`pnpm build`. النشر يستخدم Sites وملف `.openai/hosting.json` مع قاعدة بيانات D1. قيمة `ADMIN_USER_ID` تضبط في إعدادات البيئة ولا توضع في المستودع.
 
-https://cliniq-health-platform.knrpl3-791891032.chatgpt.site
-
-The live frontend currently uses demonstration data and is not connected to the API. Patient and doctor assistant endpoints are placeholders that return HTTP 501 until validated AI services are integrated. Payments and production deployment of the API remain future work.
+تسجيل الدخول عبر ChatGPT. كل مستخدم يدخل لأول مرة يحصل على حساب مريض؛ مدير الموقع يضيف طبيبًا بالبريد الإلكتروني، ويصبح له دور الطبيب عند دخوله بنفس البريد. بيانات المواعيد والحجوزات تحفظ في D1. المواعيد القديمة التجريبية لا تنتقل تلقائيًا.
